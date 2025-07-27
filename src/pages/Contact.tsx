@@ -1,9 +1,41 @@
-import React from 'react';
-import { Mail, MapPin, Phone, Clock } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, MapPin, Users, Clock } from 'lucide-react';
+import '../App.css';
 
 const Contact: React.FC = () => {
+  const [form, setForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: '',
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simple validation
+    if (!form.firstName || !form.lastName || !form.email || !form.message) {
+      setError('Please fill in all required fields.');
+      return;
+    }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+    setError('');
+    setSubmitted(true);
+    // Here you could send the form data to a backend or email service
+  };
+
   return (
-    <div style={{paddingTop: '100px'}}>
+    <div>
       {/* Hero Section */}
       <section className="section" style={{background: '#ffffff'}}>
         <div className="container">
@@ -13,13 +45,11 @@ const Contact: React.FC = () => {
               Get in touch with our team of clinical research experts
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="animate-fadeInLeft">
               <div className="glass rounded-2xl p-8">
                 <h2 className="text-2xl font-bold mb-8 gradient-text">Get In Touch</h2>
-                
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-blue-50 p-3 rounded-lg">
@@ -35,7 +65,6 @@ const Contact: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
                   <div className="flex items-start gap-4">
                     <div className="bg-purple-50 p-3 rounded-lg">
                       <Mail className="w-6 h-6 text-purple-500" />
@@ -50,7 +79,6 @@ const Contact: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  
                   <div className="flex items-start gap-4">
                     <div className="bg-red-50 p-3 rounded-lg">
                       <Clock className="w-6 h-6 text-red-500" />
@@ -67,150 +95,137 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             {/* Contact Form */}
             <div className="animate-fadeInRight">
               <div className="glass rounded-2xl p-8">
                 <h2 className="text-2xl font-bold mb-8 gradient-text-2">Send us a Message</h2>
-                
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {submitted ? (
+                  <div className="text-green-600 font-semibold text-lg text-center py-8">
+                    Thank you for reaching out! We will get back to you soon.
+                  </div>
+                ) : (
+                  <form className="space-y-6" onSubmit={handleSubmit}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          First Name <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          name="firstName"
+                          value={form.firstName}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-500"
+                          placeholder="John"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Last Name <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          name="lastName"
+                          value={form.lastName}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-500"
+                          placeholder="Doe"
+                        />
+                      </div>
+                    </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        First Name
+                        Email <span className="text-red-500">*</span>
                       </label>
                       <input
-                        type="text"
+                        type="email"
+                        name="email"
+                        value={form.email}
+                        onChange={handleChange}
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-500"
-                        placeholder="John"
+                        placeholder="john.doe@example.com"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Last Name
+                        Phone Number
                       </label>
                       <input
-                        type="text"
+                        type="tel"
+                        name="phone"
+                        value={form.phone}
+                        onChange={handleChange}
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-500"
-                        placeholder="Doe"
+                        placeholder="+91 98765 43210"
                       />
                     </div>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-500"
-                      placeholder="john.doe@example.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-500"
-                      placeholder="+91 98765 43210"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Service Interest
-                    </label>
-                    <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800">
-                      <option value="">Select a service</option>
-                      <option value="cro-development">CRO Development</option>
-                      <option value="project-management">Project Management</option>
-                      <option value="medical-writing">Medical Writing</option>
-                      <option value="translation">Translation Services</option>
-                      <option value="regulatory">Regulatory Services</option>
-                      <option value="clinical">Clinical Services</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      rows={4}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-500 resize-none"
-                      placeholder="Tell us about your project requirements..."
-                    ></textarea>
-                  </div>
-                  
-                  <button type="submit" className="btn-primary w-full">
-                    Send Message
-                  </button>
-                </form>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Service Interest
+                      </label>
+                      <select
+                        name="service"
+                        value={form.service}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800"
+                      >
+                        <option value="">Select a service</option>
+                        <option value="cro-development">CRO Development</option>
+                        <option value="project-management">Project Management</option>
+                        <option value="medical-writing">Medical Writing</option>
+                        <option value="translation">Translation Services</option>
+                        <option value="regulatory">Regulatory Services</option>
+                        <option value="clinical">Clinical Services</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Message <span className="text-red-500">*</span>
+                      </label>
+                      <textarea
+                        name="message"
+                        rows={4}
+                        value={form.message}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-500 resize-none"
+                        placeholder="Tell us about your project requirements..."
+                      ></textarea>
+                    </div>
+                    {error && <div className="text-red-500 text-sm text-center">{error}</div>}
+                    <button type="submit" className="btn-primary w-full">
+                      Send Message
+                    </button>
+                  </form>
+                )}
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Quick Contact Cards */}
-      <section className="section" style={{background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%)'}}>
+      {/* CTA Section */}
+      <section className="section" style={{background: '#ffffff'}}>
         <div className="container">
-          <h2 className="section-title">Quick Contact Options</h2>
-          <p className="section-subtitle">
-            Choose the most convenient way to reach out to our team
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="card text-center animate-fadeInUp" style={{animationDelay: '0.1s'}}>
-              <Mail className="w-12 h-12 text-blue-500 mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4 gradient-text">General Inquiries</h3>
-              <p className="text-gray-600 mb-4">
-                For general questions about our services and capabilities
-              </p>
-              <a 
-                href="mailto:ortushealthcaresolutions@gmail.com"
-                className="btn-secondary"
-              >
-                Send Email
+          <div className="glass-dark rounded-3xl p-12 text-center">
+            <h2 className="text-3xl font-bold mb-6 gradient-text-2">Quick Contact Options</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Choose the most convenient way to reach out to our team
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="mailto:ortushealthcaresolutions@gmail.com" className="btn-secondary">
+                General Inquiries
               </a>
-            </div>
-            
-            <div className="card text-center animate-fadeInUp" style={{animationDelay: '0.2s'}}>
-              <Users className="w-12 h-12 text-purple-500 mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4 gradient-text">Business Partnerships</h3>
-              <p className="text-gray-600 mb-4">
-                Interested in collaborating or partnering with us
-              </p>
-              <a 
-                href="mailto:ortushealthcaresolutions@gmail.com?subject=Partnership Inquiry"
-                className="btn-secondary"
-              >
-                Partner With Us
+              <a href="mailto:ortushealthcaresolutions@gmail.com?subject=Partnership Inquiry" className="btn-secondary">
+                Business Partnerships
               </a>
-            </div>
-            
-            <div className="card text-center animate-fadeInUp" style={{animationDelay: '0.3s'}}>
-              <Users className="w-12 h-12 text-red-500 mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4 gradient-text">Career Opportunities</h3>
-              <p className="text-gray-600 mb-4">
-                Join our team and advance your career in clinical research
-              </p>
-              <a 
-                href="mailto:ortushealthcaresolutions@gmail.com?subject=Career Application"
-                className="btn-secondary"
-              >
-                Apply Now
+              <a href="mailto:ortushealthcaresolutions@gmail.com?subject=Career Application" className="btn-secondary">
+                Career Opportunities
               </a>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Location Map Placeholder */}
+      {/* Location Section */}
       <section className="section" style={{background: '#ffffff'}}>
         <div className="container">
           <div className="glass-dark rounded-3xl p-12 text-center">

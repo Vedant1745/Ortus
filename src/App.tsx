@@ -3,9 +3,9 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Services';
+import Services from './pages/Services.tsx';
 import Contact from './pages/Contact';
-import Career from './pages/Career';
+import Career from './pages/Career.tsx';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');

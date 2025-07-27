@@ -1,9 +1,10 @@
 import React from 'react';
 import { MapPin, Target, Users, Award } from 'lucide-react';
+import '../App.css';
 
 const About: React.FC = () => {
   return (
-    <div style={{paddingTop: '100px'}}>
+    <div>
       {/* Hero Section */}
       <section className="section" style={{background: '#ffffff'}}>
         <div className="container">
@@ -13,7 +14,6 @@ const About: React.FC = () => {
               Committed to empowering excellence in clinical research across India
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fadeInLeft">
               <div className="glass rounded-2xl p-8">
@@ -29,7 +29,6 @@ const About: React.FC = () => {
                 </p>
               </div>
             </div>
-            
             <div className="animate-fadeInRight">
               <div className="glass rounded-2xl p-8">
                 <h2 className="text-2xl font-bold mb-6 gradient-text-2">Our Vision</h2>
@@ -47,7 +46,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Values Section */}
       <section className="section" style={{background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%)'}}>
         <div className="container">
@@ -55,7 +53,6 @@ const About: React.FC = () => {
           <p className="section-subtitle">
             The principles that guide everything we do at Ortus Healthcare Solutions
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="card animate-fadeInUp" style={{animationDelay: '0.1s'}}>
               <Target className="w-12 h-12 text-blue-500 mb-6" />
@@ -64,7 +61,6 @@ const About: React.FC = () => {
                 We maintain the highest standards in all our deliverables and continuously strive for perfection
               </p>
             </div>
-            
             <div className="card animate-fadeInUp" style={{animationDelay: '0.2s'}}>
               <Users className="w-12 h-12 text-purple-500 mb-6" />
               <h3 className="text-xl font-semibold mb-4 gradient-text">Collaboration</h3>
@@ -72,7 +68,6 @@ const About: React.FC = () => {
                 We work closely with our clients as partners, ensuring seamless integration and shared success
               </p>
             </div>
-            
             <div className="card animate-fadeInUp" style={{animationDelay: '0.3s'}}>
               <Award className="w-12 h-12 text-red-500 mb-6" />
               <h3 className="text-xl font-semibold mb-4 gradient-text">Integrity</h3>
@@ -80,7 +75,6 @@ const About: React.FC = () => {
                 We uphold the highest ethical standards and maintain transparency in all our operations
               </p>
             </div>
-            
             <div className="card animate-fadeInUp" style={{animationDelay: '0.4s'}}>
               <MapPin className="w-12 h-12 text-yellow-500 mb-6" />
               <h3 className="text-xl font-semibold mb-4 gradient-text">Innovation</h3>
@@ -91,97 +85,17 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Expertise Section */}
+      {/* CTA Section */}
       <section className="section" style={{background: '#ffffff'}}>
         <div className="container">
-          <h2 className="section-title">Our Expertise</h2>
-          <p className="section-subtitle">
-            Deep knowledge and experience across all aspects of clinical research
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="service-card">
-              <h3 className="gradient-text-3">Regulatory Compliance</h3>
-              <ul>
-                <li>ICH-GCP Guidelines</li>
-                <li>CDSCO Regulations</li>
-                <li>International Standards</li>
-                <li>Quality Assurance</li>
-              </ul>
-            </div>
-            
-            <div className="service-card">
-              <h3 className="gradient-text-3">Project Management</h3>
-              <ul>
-                <li>Strategic Planning</li>
-                <li>Resource Optimization</li>
-                <li>Timeline Management</li>
-                <li>Risk Mitigation</li>
-              </ul>
-            </div>
-            
-            <div className="service-card">
-              <h3 className="gradient-text-3">Site Development</h3>
-              <ul>
-                <li>Facility Setup</li>
-                <li>Infrastructure Planning</li>
-                <li>Team Training</li>
-                <li>Operational Readiness</li>
-              </ul>
-            </div>
-            
-            <div className="service-card">
-              <h3 className="gradient-text-3">Medical Writing</h3>
-              <ul>
-                <li>Protocol Development</li>
-                <li>Regulatory Documents</li>
-                <li>Clinical Study Reports</li>
-                <li>Publication Support</li>
-              </ul>
-            </div>
-            
-            <div className="service-card">
-              <h3 className="gradient-text-3">Translation Services</h3>
-              <ul>
-                <li>Multilingual Support</li>
-                <li>Cultural Adaptation</li>
-                <li>Quality Validation</li>
-                <li>Regulatory Compliance</li>
-              </ul>
-            </div>
-            
-            <div className="service-card">
-              <h3 className="gradient-text-3">Clinical Operations</h3>
-              <ul>
-                <li>Site Management</li>
-                <li>Monitoring Services</li>
-                <li>Data Quality</li>
-                <li>Audit Support</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Location Section */}
-      <section className="section" style={{background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%)'}}>
-        <div className="container">
           <div className="glass-dark rounded-3xl p-12 text-center">
-            <MapPin className="w-16 h-16 text-blue-500 mx-auto mb-6" />
-            <h2 className="text-3xl font-bold mb-6 gradient-text-2">Our Location</h2>
-            <p className="text-xl text-gray-700 mb-4">
-              <strong>Ortus Healthcare Solutions</strong>
+            <h2 className="text-3xl font-bold mb-6 gradient-text-2">Ready to Partner with Us?</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Join Ortus Healthcare Solutions and experience the difference that expert guidance makes in your clinical research journey.
             </p>
-            <p className="text-lg text-gray-600 mb-2">
-              101, Mhatoba Complex,<br />
-              Opp. Birla Soft Gate No.1,<br />
-              Hinjewadi, Pune - 411057,<br />
-              Maharashtra, India
-            </p>
-            <p className="text-blue-500 font-medium mt-6">
-              Strategically located in Pune's premier IT hub for enhanced connectivity and collaboration
-            </p>
+            <button className="btn-primary" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+              Contact Us
+            </button>
           </div>
         </div>
       </section>
