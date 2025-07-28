@@ -328,6 +328,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-top: 48px;
 }
 
 .section-subtitle {
@@ -468,6 +469,7 @@ body {
   .section-title {
     font-size: 1.3rem;
     margin-bottom: 12px;
+    margin-top: 32px;
   }
   .section-subtitle {
     font-size: 1rem;
@@ -500,6 +502,7 @@ body {
   .section-title {
     font-size: 1.1rem;
     margin-bottom: 8px;
+    margin-top: 20px;
   }
   .section-subtitle {
     font-size: 0.95rem;
