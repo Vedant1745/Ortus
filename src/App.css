@@ -517,6 +517,9 @@ body {
   .glass-dark, .glass {
     padding: 6px !important;
   }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
 }
 /* Hamburger menu refinement */
 @media (max-width: 1024px) {
