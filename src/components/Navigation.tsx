@@ -52,20 +52,31 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage, setCurrentPage }) 
                 className={`nav-item border-b border-gray-100 ${currentPage === item.id ? 'active' : ''}`}
                 style={{
                   fontSize: '1rem',
-                  padding: '10px 18px',
-                  borderRadius: '12px',
+                  padding: '12px 18px',
+                  borderRadius: '8px',
                   margin: '4px 0',
-                  background: currentPage === item.id ? 'rgba(59,130,246,0.08)' : 'transparent',
-                  fontWeight: currentPage === item.id ? 600 : 400,
-                  transition: 'background 0.2s',
+                  background: currentPage === item.id ? 'rgba(26, 35, 126, 0.1)' : 'transparent',
+                  fontWeight: currentPage === item.id ? 600 : 500,
+                  transition: 'all 0.2s ease',
                   cursor: 'pointer',
+                  color: currentPage === item.id ? '#1a237e' : '#374151',
                 }}
                 onClick={() => {
                   setCurrentPage(item.id);
                   setMenuOpen(false);
                 }}
-                onMouseOver={e => (e.currentTarget.style.background = 'rgba(59,130,246,0.05)')}
-                onMouseOut={e => (e.currentTarget.style.background = currentPage === item.id ? 'rgba(59,130,246,0.08)' : 'transparent')}
+                onMouseOver={e => {
+                  if (currentPage !== item.id) {
+                    e.currentTarget.style.background = 'rgba(26, 35, 126, 0.05)';
+                    e.currentTarget.style.color = '#1a237e';
+                  }
+                }}
+                onMouseOut={e => {
+                  if (currentPage !== item.id) {
+                    e.currentTarget.style.background = 'transparent';
+                    e.currentTarget.style.color = '#374151';
+                  }
+                }}
               >
                 {item.label}
               </li>
