@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services.tsx';
@@ -37,6 +38,7 @@ function App() {
       <main className="page-content">
         {renderPage()}
       </main>
+      <Footer />
     </div>
   );
 }
