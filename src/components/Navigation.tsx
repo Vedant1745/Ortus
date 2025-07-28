@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Heart, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 interface NavigationProps {
   currentPage: string;
@@ -20,8 +21,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage, setCurrentPage }) 
     <nav className="navigation">
       <div className="nav-container">
         <div className="logo">
-          <Heart className="inline-block mr-2" size={24} />
-          Ortus Healthcare
+          <img src={logo} alt="Ortus Healthcare" className="h-12 w-auto" />
         </div>
         {/* Hamburger for mobile */}
         <button

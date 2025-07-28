@@ -1,5 +1,6 @@
 import React from 'react';
-import { Heart, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -9,8 +10,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Heart className="w-6 h-6 text-blue-400" />
-              <span className="text-xl font-bold gradient-text">Ortus Healthcare</span>
+              <img src={logo} alt="Ortus Healthcare" className="h-8 w-auto" />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering excellence in clinical research across India. 
