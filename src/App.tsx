@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
@@ -9,6 +9,10 @@ import Career from './pages/Career.tsx';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
 
   const renderPage = () => {
     switch (currentPage) {

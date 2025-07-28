@@ -450,47 +450,83 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
+  .btn-primary, .btn-secondary {
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 30px;
   }
-  
-  .hero p {
-    font-size: 1.1rem;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
   .nav-menu {
-    gap: 15px;
-  }
-  
-  .nav-item {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-  
-  .container {
-    padding: 0 15px;
-  }
-  
-  .card, .service-card {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .nav-menu {
-    flex-wrap: wrap;
     gap: 10px;
   }
-  
+  .nav-item {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
   .section {
-    padding: 60px 0;
+    padding: 36px 0;
+  }
+  .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  .card, .service-card {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  .glass-dark, .glass {
+    padding: 10px !important;
+  }
+}
+@media (max-width: 480px) {
+  .btn-primary, .btn-secondary {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+    border-radius: 24px;
+  }
+  .nav-menu {
+    gap: 6px;
+  }
+  .nav-item {
+    font-size: 0.95rem;
+    padding: 8px 0;
+  }
+  .section {
+    padding: 18px 0;
+  }
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+  .card, .service-card {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  .glass-dark, .glass {
+    padding: 6px !important;
+  }
+}
+/* Hamburger menu refinement */
+@media (max-width: 1024px) {
+  .nav-menu.lg\\:hidden, .nav-menu.lg\:hidden {
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(59,130,246,0.08);
+    z-index: 1001;
+  }
+  .nav-menu.lg\\:hidden .nav-item, .nav-menu.lg\:hidden .nav-item {
+    font-size: 1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f4f6;
+    margin: 0 18px;
   }
 }
