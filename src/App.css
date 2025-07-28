@@ -18,6 +18,10 @@ body {
   min-height: 100vh;
 }
 
+.page-content {
+  padding-top: 80px; /* Account for fixed navigation */
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -321,7 +325,7 @@ body {
 
 .section-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 20px;
   background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
@@ -333,7 +337,7 @@ body {
 
 .section-subtitle {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #718096;
   margin-bottom: 60px;
   max-width: 600px;
@@ -401,8 +405,8 @@ body {
   padding: 20px 0;
   backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
-  box-shadow: 0 2px 20px rgba(59, 130, 246, 0.1);
+  border-bottom: 1px solid rgba(26, 35, 126, 0.1);
+  box-shadow: 0 2px 20px rgba(26, 35, 126, 0.1);
 }
 
 .nav-container {
@@ -467,12 +471,11 @@ body {
     padding: 36px 0;
   }
   .section-title {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
+    font-size: 2.5rem;
     margin-top: 32px;
   }
   .section-subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
   }
   .card, .service-card {
@@ -500,12 +503,11 @@ body {
     padding: 18px 0;
   }
   .section-title {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+    font-size: 2rem;
     margin-top: 20px;
   }
   .section-subtitle {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     margin-bottom: 18px;
   }
   .card, .service-card {
