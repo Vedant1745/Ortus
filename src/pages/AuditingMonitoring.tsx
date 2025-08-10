@@ -44,7 +44,7 @@ const AuditingMonitoring: React.FC<AuditingMonitoringProps> = ({ setCurrentPage 
             <Search className="w-24 h-24 text-blue-600 mx-auto" />
           </div>
           
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-pink-600 mb-4">
             Auditing and Monitoring Services
           </h1>
           
@@ -67,7 +67,7 @@ const AuditingMonitoring: React.FC<AuditingMonitoringProps> = ({ setCurrentPage 
                   <div className="p-3 bg-blue-100 rounded-lg mr-4">
                     <Search className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
+                  <h3 className="text-lg font-semibold text-blue-900">{service.title}</h3>
                 </div>
                 <p className="text-gray-600">{service.description}</p>
               </div>
