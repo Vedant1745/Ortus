@@ -396,27 +396,9 @@ body {
 }
 
 /* Navigation specific styles */
-.navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 20px 0;
-  backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid rgba(26, 35, 126, 0.1);
-  box-shadow: 0 2px 20px rgba(26, 35, 126, 0.1);
-}
+/* Old navigation styles removed - now using Tailwind CSS */
 
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/* Navigation styles removed - now using Tailwind CSS classes */
 
 .logo {
   font-size: 1.5rem;
@@ -427,32 +409,6 @@ body {
   background-clip: text;
 }
 
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.nav-item {
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  position: relative;
-  color: #4a5568;
-}
-
-.nav-item:hover {
-  background: rgba(26, 35, 126, 0.08);
-  color: #1a237e;
-}
-
-.nav-item.active {
-  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
-  color: white;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
   .btn-primary, .btn-secondary {
@@ -460,13 +416,7 @@ body {
     font-size: 1rem;
     border-radius: 30px;
   }
-  .nav-menu {
-    gap: 10px;
-  }
-  .nav-item {
-    padding: 10px 0;
-    font-size: 1rem;
-  }
+  /* Navigation responsive styles removed - now using Tailwind CSS */
   .section {
     padding: 36px 0;
   }
@@ -492,13 +442,7 @@ body {
     font-size: 0.95rem;
     border-radius: 24px;
   }
-  .nav-menu {
-    gap: 6px;
-  }
-  .nav-item {
-    font-size: 0.95rem;
-    padding: 8px 0;
-  }
+  /* Navigation responsive styles removed - now using Tailwind CSS */
   .section {
     padding: 18px 0;
   }
