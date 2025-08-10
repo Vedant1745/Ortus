@@ -49,10 +49,10 @@ const CRODevelopment: React.FC<CRODevelopmentProps> = ({ setCurrentPage }) => {
           
           {/* Large Icon */}
           <div className="mb-6">
-            <Building className="w-24 h-24 text-blue-600 mx-auto" />
+            <Building className="w-24 h-24 text-pink-600 mx-auto" />
           </div>
           
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-pink-600 mb-4">
             Development of Clinical Research Organization and Clinical Trial Site
           </h1>
           
@@ -64,9 +64,9 @@ const CRODevelopment: React.FC<CRODevelopmentProps> = ({ setCurrentPage }) => {
 
         {/* Core Services Section */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8 animate-fadeInUp">
-            Core Services
-          </h2>
+                              <h2 className="text-3xl font-bold text-pink-500 text-center mb-8 animate-fadeInUp">
+                      Core Services
+                    </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
@@ -75,7 +75,7 @@ const CRODevelopment: React.FC<CRODevelopmentProps> = ({ setCurrentPage }) => {
                   <div className="p-3 bg-blue-100 rounded-lg mr-4">
                     <Building className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
+                  <h3 className="text-lg font-semibold text-blue-900">{service.title}</h3>
                 </div>
                 <p className="text-gray-600">{service.description}</p>
               </div>

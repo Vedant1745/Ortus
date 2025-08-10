@@ -13,11 +13,11 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
         <div className="container">
           <div className="hero-content animate-fadeInUp">
             <h1>
-              Empowering Excellence in <span className="gradient-text">Clinical Research</span>
+              <span className="text-pink-500">Empowering Excellence in</span> <span className="gradient-text">Clinical Research</span>
             </h1>
             <p>
               At Ortus Healthcare Solutions, we provide end-to-end consulting services for clinical 
-              research organizations and trial sites across India. From regulatory compliance to 
+              research organizations. From regulatory compliance to 
               project management, we support your success at every stage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -85,39 +85,39 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
       {/* Services Overview */}
       <section className="section" style={{background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%)'}}>
         <div className="container">
-          <h2 className="section-title">Our Core Services</h2>
+          <h2 className="section-title text-pink-500">Our Core Services</h2>
           <p className="section-subtitle">
             Comprehensive solutions for every aspect of clinical research and development
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="service-card">
-              <h3>CRO & Site Development</h3>
+              <h3 className="text-pink-500">CRO & Site Development</h3>
               <p className="text-gray-600">Complete facility setup, SOP development, and regulatory compliance support</p>
             </div>
             
             <div className="service-card">
-              <h3>Project Management</h3>
+              <h3 className="text-pink-500">Project Management</h3>
               <p className="text-gray-600">Strategic planning, resource allocation, and vendor management</p>
             </div>
             
             <div className="service-card">
-              <h3>Medical Writing</h3>
+              <h3 className="text-pink-500">Medical Writing</h3>
               <p className="text-gray-600">Protocol development, CSRs, and regulatory documentation</p>
             </div>
             
             <div className="service-card">
-              <h3>Translation Services</h3>
+              <h3 className="text-pink-500">Translation Services</h3>
               <p className="text-gray-600">Certified multilingual translation for informed consent documents</p>
             </div>
             
             <div className="service-card">
-              <h3>Regulatory Services</h3>
+              <h3 className="text-pink-500">Regulatory Services</h3>
               <p className="text-gray-600">CDSCO submissions, eCTD preparation, and regulatory approvals</p>
             </div>
             
             <div className="service-card">
-              <h3>Clinical Services</h3>
+              <h3 className="text-pink-500">Clinical Services</h3>
               <p className="text-gray-600">Site management, monitoring, and compliance support</p>
             </div>
           </div>

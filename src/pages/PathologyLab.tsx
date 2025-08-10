@@ -40,7 +40,7 @@ const PathologyLab: React.FC<PathologyLabProps> = ({ setCurrentPage }) => {
             <Microscope className="w-24 h-24 text-blue-600 mx-auto" />
           </div>
           
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-pink-600 mb-4">
             Central Pathology Lab Services
           </h1>
           
@@ -52,9 +52,9 @@ const PathologyLab: React.FC<PathologyLabProps> = ({ setCurrentPage }) => {
 
         {/* Core Services Section */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8 animate-fadeInUp">
-            Core Services
-          </h2>
+                              <h2 className="text-3xl font-bold text-pink-500 text-center mb-8 animate-fadeInUp">
+                      Core Services
+                    </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (

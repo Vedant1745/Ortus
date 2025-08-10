@@ -11,35 +11,26 @@ const About: React.FC = () => {
           <div className="text-center mb-16">
             <h1 className="section-title animate-fadeInUp">About Ortus Healthcare Solutions</h1>
             <p className="section-subtitle animate-fadeInUp">
-              Committed to empowering excellence in clinical research across India
+              <span className="text-pink-500">Committed to empowering excellence in clinical research</span>
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fadeInLeft">
               <div className="glass rounded-2xl p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">Our Mission</h2>
+                <h2 className="text-2xl font-bold mb-6 text-pink-500">Our Mission</h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  At Ortus Healthcare Solutions, we are committed to empowering excellence in clinical 
-                  research. Based in Pune, Maharashtra, we offer end-to-end consulting services for 
-                  clinical research organizations (CROs) and clinical trial sites across India.
+                  To empower excellence in clinical research through deep expertise and unwavering support to clients.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  With deep expertise in regulatory compliance, project management, and site development, 
-                  our team supports clients at every stage of the clinical trial lifecycle.
+                  
                 </p>
               </div>
             </div>
             <div className="animate-fadeInRight">
               <div className="glass rounded-2xl p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text-2">Our Vision</h2>
+                <h2 className="text-2xl font-bold mb-6 text-pink-500">Our Vision</h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Whether you're a new research site or an established CRO aiming to scale, Ortus 
-                  provides strategic, technical, and operational guidance to ensure your success 
-                  in the ever-evolving healthcare landscape.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  We strive to be India's most trusted partner in clinical research excellence, 
-                  driving innovation and maintaining the highest standards of quality and compliance.
+                  We strive to be most trusted partner in clinical research excellence, driving innovation and maintaining the highest standards of quality and compliance.
                 </p>
               </div>
             </div>

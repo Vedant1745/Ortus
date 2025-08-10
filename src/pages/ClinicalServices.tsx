@@ -72,9 +72,9 @@ const ClinicalServices: React.FC<ClinicalServicesProps> = ({ setCurrentPage }) =
 
         {/* Core Services Section */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8 animate-fadeInUp">
-            Core Services
-          </h2>
+                              <h2 className="text-3xl font-bold text-pink-500 text-center mb-8 animate-fadeInUp">
+                      Core Services
+                    </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (

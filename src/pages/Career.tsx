@@ -13,23 +13,23 @@ const Career: React.FC = () => (
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-12">
           <div className="card animate-fadeInUp" style={{animationDelay: '0.1s'}}>
-            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 gradient-text">Clinical Operations</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-pink-600">Clinical Operations</h3>
             <p className="text-gray-600 text-sm md:text-base">Work on the frontlines of clinical research, supporting trial execution and site management.</p>
           </div>
           <div className="card animate-fadeInUp" style={{animationDelay: '0.2s'}}>
-            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 gradient-text">Regulatory Affairs</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-pink-600">Regulatory Affairs</h3>
             <p className="text-gray-600 text-sm md:text-base">Ensure compliance and manage submissions to regulatory authorities.</p>
           </div>
           <div className="card animate-fadeInUp" style={{animationDelay: '0.3s'}}>
-            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 gradient-text">Project Management</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-pink-600">Project Management</h3>
             <p className="text-gray-600 text-sm md:text-base">Lead and coordinate clinical research projects from planning to completion.</p>
           </div>
           <div className="card animate-fadeInUp" style={{animationDelay: '0.4s'}}>
-            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 gradient-text">Medical Writing</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-pink-600">Medical Writing</h3>
             <p className="text-gray-600 text-sm md:text-base">Draft protocols, reports, and publications to advance scientific knowledge.</p>
           </div>
           <div className="card animate-fadeInUp" style={{animationDelay: '0.5s'}}>
-            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 gradient-text">Fresh Graduates</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-pink-600">Fresh Graduates</h3>
             <p className="text-gray-600 text-sm md:text-base">Kickstart your career in healthcare with mentorship and growth opportunities.</p>
           </div>
         </div>
