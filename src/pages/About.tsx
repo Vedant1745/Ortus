@@ -14,6 +14,18 @@ const About: React.FC = () => {
               <span className="text-pink-500">Committed to empowering excellence in clinical research</span>
             </p>
           </div>
+          <div className="max-w-4xl mx-auto mb-16 animate-fadeInUp">
+            <div className="glass rounded-2xl p-8 border border-blue-900">
+              <p className="text-lg text-gray-600 leading-relaxed">
+                At Ortus Healthcare Solutions, we are committed to empowering excellence in clinical research. 
+                We offer end-to-end consulting services for clinical research organizations (CROs) and clinical 
+                trial sites across India. With deep expertise in regulatory compliance, project management, and site development, 
+                our team supports clients at every stage of the clinical trial lifecycle. Whether you're a new research site or 
+                an established CRO aiming to scale, Ortus provides strategic, technical, and operational guidance to ensure your 
+                success in the ever-evolving healthcare landscape.
+              </p>
+            </div>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fadeInLeft">
               <div className="glass rounded-2xl p-8">
