@@ -28,8 +28,8 @@ const About: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fadeInLeft">
-              <div className="glass rounded-2xl p-8">
-                <h2 className="text-2xl font-bold mb-6 text-pink-500">Our Mission</h2>
+              <div className="glass rounded-2xl p-8 border border-blue-900">
+                <h2 className="text-2xl font-bold mb-6 text-center text-pink-500">Our Mission</h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   To empower excellence in clinical research through deep expertise and unwavering support to clients.
                 </p>
@@ -39,8 +39,8 @@ const About: React.FC = () => {
               </div>
             </div>
             <div className="animate-fadeInRight">
-              <div className="glass rounded-2xl p-8">
-                <h2 className="text-2xl font-bold mb-6 text-pink-500">Our Vision</h2>
+              <div className="glass rounded-2xl p-8 border border-blue-900">
+                <h2 className="text-2xl font-bold mb-6 text-center text-pink-500">Our Vision</h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   We strive to be most trusted partner in clinical research excellence, driving innovation and maintaining the highest standards of quality and compliance.
                 </p>
