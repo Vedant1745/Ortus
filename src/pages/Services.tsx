@@ -14,7 +14,7 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, desc, detailedDesc, serviceId, setCurrentPage }) => (
   <div className="card animate-fadeInUp group hover:shadow-xl transition-all duration-300">
     {icon}
-    <h3 className="text-xl font-semibold mb-4 text-pink-500">{title}</h3>
+    <h3 className="text-xl font-semibold mb-4 text-pink-600">{title}</h3>
     <p className="text-gray-600 mb-4">{desc}</p>
     <p className="text-gray-500 text-sm mb-6">{detailedDesc}</p>
     <button 
