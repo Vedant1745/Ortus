@@ -34,14 +34,14 @@ interface ServicesProps {
 const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
   const services = [
     {
-      icon: <Building className="w-12 h-12 text-blue-500 mb-6" />,
+      icon: <Building className="w-12 h-12 text-blue-900 mb-6" />,
       title: 'CRO & Site Development',
       desc: 'Facility setup, SOPs, and regulatory compliance for research sites.',
       detailedDesc: 'Comprehensive planning and setup support for BA/BE CRO and clinical trial facilities, ensuring regulatory compliance and operational readiness.',
       serviceId: 'cro-development'
     },
     {
-      icon: <Users className="w-12 h-12 text-purple-500 mb-6" />,
+      icon: <Users className="w-12 h-12 text-purple-900 mb-6" />,
       title: 'Project Management',
       desc: 'Strategic planning, resource allocation, and vendor management.',
       detailedDesc: 'Tailored project strategies and execution plans to meet study timelines and objectives with strategic resource deployment.',
@@ -62,14 +62,14 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
       serviceId: 'translation-services'
     },
     {
-      icon: <Shield className="w-12 h-12 text-blue-500 mb-6" />,
+      icon: <Shield className="w-12 h-12 text-blue-900 mb-6" />,
       title: 'Regulatory Services',
       desc: 'CDSCO submissions, eCTD preparation, and regulatory approvals.',
       detailedDesc: 'End-to-end CDSCO submissions, eCTD preparation, and regulatory query response management.',
       serviceId: 'regulatory-services'
     },
     {
-      icon: <Stethoscope className="w-12 h-12 text-purple-500 mb-6" />,
+      icon: <Stethoscope className="w-12 h-12 text-purple-900 mb-6" />,
       title: 'Clinical Services',
       desc: 'Site management, monitoring, and compliance support.',
       detailedDesc: 'Site development, management, monitoring, and comprehensive compliance support across all trial stages.',
@@ -90,14 +90,14 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
       serviceId: 'auditing-monitoring'
     },
     {
-      icon: <GraduationCap className="w-12 h-12 text-blue-500 mb-6" />,
+      icon: <GraduationCap className="w-12 h-12 text-blue-900 mb-6" />,
       title: 'Training',
       desc: 'GCP, GLP, GxP, and regulatory guidelines training.',
       detailedDesc: 'Comprehensive training programs covering GCP, GLP, GxP, and regulatory guidelines for compliant operations.',
       serviceId: 'training'
     },
     {
-      icon: <TrendingUp className="w-12 h-12 text-purple-500 mb-6" />,
+      icon: <TrendingUp className="w-12 h-12 text-purple-900 mb-6" />,
       title: 'Pharmacokinetics & Biostatistics',
       desc: 'PK strategy, study design, and statistical analysis.',
       detailedDesc: 'Expert PK strategy consulting, study design optimization, and comprehensive statistical analysis support.',
