@@ -19,7 +19,7 @@ const About: React.FC = () => {
               <p className="text-lg text-gray-600 leading-relaxed">
                 At Ortus Healthcare Solutions, we are committed to empowering excellence in clinical research. 
                 We offer end-to-end consulting services for clinical research organizations (CROs) and clinical 
-                trial sites across India. With deep expertise in regulatory compliance, project management, and site development, 
+                trial sites across the globe. With deep expertise in regulatory compliance, project management, and site development, 
                 our team supports clients at every stage of the clinical trial lifecycle. Whether you're a new research site or 
                 an established CRO aiming to scale, Ortus provides strategic, technical, and operational guidance to ensure your 
                 success in the ever-evolving healthcare landscape.
